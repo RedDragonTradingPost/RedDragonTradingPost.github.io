@@ -1,7 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Dragon's Lair</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-image: url('dungeon-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #660000;
+            padding: 10px;
+            border-bottom: 2px solid #990000;
+        }
+        nav a {
+            color: #ffff00;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 5px #660000;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #660000;
+            border-top: 2px solid #990000;
+        }
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="content" id="home">
+        <h1>Welcome to the Red Dragon's Lair</h1>
+        <p>Connect with me on social media:</p>
+        <p>
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+        </p>
+    </div>
+
+    <div class="content" id="about">
+        <h2>About Me</h2>
+        <p>Greetings, traveler! I am [Your Name], the mind behind the Red Dragon business. I specialize in [your product or service]. Whether you're seeking powerful artifacts or ancient scrolls, my lair is your one-stop destination for the finest wares.</p>
+    </div>
+
+    <div class="content" id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at:</p>
+        <p>Email: <a href="mailto:youremail@domain.com">youremail@domain.com</a></p>
+        <p>Phone: [Your Phone Number]</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Red Dragon's Lair</p>
+    </footer>
 </body>
 </html>
