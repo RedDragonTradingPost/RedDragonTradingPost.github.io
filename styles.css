@@ -1,118 +1,45 @@
-/* General Styles */
-body {
-    background-color: black;
-    color: white;
-    font-family: "Courier New", Courier, monospace;
+/* Ensure the body and HTML cover the full height of the page */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url('dungeon-background.jpeg');
+    font-family: 'YourCustomFont', sans-serif;
+    background-image: url('dungeon-background-desktop.jpg'); /* Ensure correct file path */
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-h1, h2, p {
-    text-align: center;
+/* Apply the custom cursor globally */
+* {
+    cursor: url('NORMAL.cur'), auto; /* Ensure correct file path for cursor */
 }
 
-nav {
-    text-align: center;
-    background-color: #660000;
+/* Center the container of links */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full height of the screen */
+}
+
+/* Styling for each link */
+.links a {
+    width: 200px; /* Set a specific width for the links */
+    margin: 10px 0;
     padding: 10px;
-    border-bottom: 2px solid #990000;
-}
-
-nav a {
-    color: #ffff00;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.content {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 5px #660000;
-    flex-grow: 1;
-}
-
-footer {
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    padding: 10px;
-    background-color: #660000;
-    border-top: 2px solid #990000;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Social Media Boxes */
-.social-media-box {
-    background-color: #660000;
-    padding: 15px;
-    margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 2px #990000;
-    text-align: center;
-}
-
-.social-media-box a {
-    color: #ffff00;
+    color: #000;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.social-media-box a:hover {
-    text-decoration: underline;
+.links a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
 }
 
-/* Mobile-friendly adjustments */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .content {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    .social-media-box {
-        width: 90%;
-    }
-}
-
-/* Desktop-specific adjustments */
-@media screen and (min-width: 769px) {
-    body {
-        font-size: 18px;
-    }
-
-    nav a {
-        margin: 0 25px;
-    }
-
-    .content {
-        margin: 40px auto;
-        padding: 30px;
-    }
-
-    .social-media-box {
-        width: 50%;
-    }
-}
