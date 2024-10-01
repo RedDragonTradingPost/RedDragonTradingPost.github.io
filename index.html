@@ -16,11 +16,19 @@
             <a href="https://www.tiktok.com/@reddragontradingpost" target="_blank">TikTok</a>
         </div>
 
-        <!-- Audio Player (Hidden) -->
-        <audio id="audioPlayer">
-            Your browser does not support the audio element.
-        </audio>
+        <!-- Audio Player (Visible) -->
+        <div class="audio-controls">
+            <audio id="audioPlayer" controls>
+                Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+                <button id="prevSong">Previous</button>
+                <button id="nextSong">Next</button>
+                <button id="shuffle">Shuffle</button>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+

@@ -11,6 +11,13 @@ html, body {
     background-attachment: fixed;
 }
 
+/* Mobile fix for background image warping */
+@media only screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Fixes background movement on mobile */
+    }
+}
+
 /* Apply the custom cursor globally */
 * {
     cursor: url('NORMAL.cur'), auto; /* Ensure correct file path for cursor */
@@ -41,5 +48,27 @@ html, body {
 .links a:hover {
     background-color: rgba(255, 255, 255, 1);
     transform: scale(1.05);
+}
+
+/* Audio controls styling */
+.audio-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #555;
 }
 
