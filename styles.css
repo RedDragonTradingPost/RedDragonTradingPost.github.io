@@ -15,7 +15,7 @@ html, body {
 /* Mobile-friendly background image */
 @media only screen and (max-width: 768px) {
     body {
-        background-image: url('trees-mobile.jpg'); /* Mobile image */
+        background-image: url('dungeon-background-desktop.jpg'); /* Mobile image */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
