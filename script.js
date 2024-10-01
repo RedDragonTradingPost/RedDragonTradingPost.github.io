@@ -6,7 +6,7 @@ let shuffleMode = false;
 
 // Set the first song and volume
 audioPlayer.src = playlist[currentSong];
-audioPlayer.volume = 0.5;
+audioPlayer.volume = 0.25;
 
 // Play music on page load
 window.onload = () => {
@@ -40,10 +40,9 @@ function prevSong() {
     audioPlayer.play();
 }
 
-// Shuffle toggle function
+// Shuffle toggle function (no alert)
 function toggleShuffle() {
     shuffleMode = !shuffleMode;
-    alert(shuffleMode ? 'Shuffle mode ON' : 'Shuffle mode OFF');
 }
 
 // Button event listeners

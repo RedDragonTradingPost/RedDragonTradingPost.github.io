@@ -9,12 +9,13 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative; /* Ensure the background image stays fixed */
 }
 
 /* Mobile fix for background image warping */
 @media only screen and (max-width: 768px) {
     body {
-        background-attachment: scroll; /* Fixes background movement on mobile */
+        background-attachment: local; /* Prevents background movement on mobile */
     }
 }
 
@@ -71,4 +72,5 @@ html, body {
 .controls button:hover {
     background-color: #555;
 }
+
 
