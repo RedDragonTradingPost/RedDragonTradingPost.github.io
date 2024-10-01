@@ -1,14 +1,15 @@
-// Music playlist
 const audioPlayer = document.getElementById('audioPlayer');
 const playlist = ['GET_ENUF.mp3', 'JACK_DA_FUNK.mp3', 'DA_PEOPLE.mp3']; // Replace with your actual file names
 let currentSong = 0;
-let shuffleMode = false;
+
+// Set shuffle mode to true
+let shuffleMode = true;
 
 // Set the first song and volume
 audioPlayer.src = playlist[currentSong];
 audioPlayer.volume = 0.25;
 
-// Play music on page load
+// Automatically play music on page load
 window.onload = () => {
     audioPlayer.play();
 };
@@ -19,7 +20,7 @@ audioPlayer.addEventListener('ended', nextSong);
 // Next song function
 function nextSong() {
     if (shuffleMode) {
-        currentSong = Math.floor(Math.random() * playlist.length); // Random song
+        currentSong = Math.floor(Math.random() * playlist.length); // Play a random song
     } else {
         currentSong++;
         if (currentSong >= playlist.length) {
@@ -40,12 +41,6 @@ function prevSong() {
     audioPlayer.play();
 }
 
-// Shuffle toggle function (no alert)
-function toggleShuffle() {
-    shuffleMode = !shuffleMode;
-}
-
 // Button event listeners
 document.getElementById('nextSong').addEventListener('click', nextSong);
 document.getElementById('prevSong').addEventListener('click', prevSong);
-document.getElementById('shuffle').addEventListener('click', toggleShuffle);

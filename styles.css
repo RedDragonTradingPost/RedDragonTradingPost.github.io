@@ -12,10 +12,21 @@ html, body {
     position: relative; /* Ensure the background image stays fixed */
 }
 
-/* Mobile fix for background image warping */
+/* Mobile-friendly background image */
 @media only screen and (max-width: 768px) {
     body {
-        background-attachment: local; /* Prevents background movement on mobile */
+        background-image: url('trees-mobile.jpg'); /* Mobile image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Keep it fixed */
+    }
+}
+
+/* Mobile fix for background image staying fixed */
+@media only screen and (max-width: 768px) {
+    body {
+        background-attachment: fixed; /* Ensure the background stays fixed on mobile too */
     }
 }
 
